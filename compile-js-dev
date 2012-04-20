@@ -1,0 +1,13 @@
+#!/bin/sh
+
+CLOJURESCRIPT_HOME=clojurescript
+
+CLASSPATH=src/clj:$CLOJURESCRIPT_HOME"/src/clj":$CLOJURESCRIPT_HOME"/src/cljs"
+
+for next in lib/*; do
+  CLASSPATH=$CLASSPATH:$next
+done
+
+REPL_CLJ="(use 'cljs.closure)(def opts {:output-to \"web/ftree-dev.js\" :output-dir \"web/js\"})(build \"src/cljs\" opts)"
+
+java -server -cp "$CLASSPATH" clojure.main -e "$REPL_CLJ"
