@@ -16,6 +16,8 @@ Resources on finger trees:
 
 Library is not packaged, you should copy ftree source files directly to your project.
 
+List of functions:
+
 * Common for all finger trees - [ftree.core](https://github.com/wagjo/ftree/blob/master/src/cljs/ftree/core.cljs)
   * __conjl__ - conj[oin] l[eft]. Returns a new finger tree with the xs 'added'
   to the left.
@@ -29,7 +31,6 @@ Library is not packaged, you should copy ftree source files directly to your pro
   * __measured__ - Returns measure of object o. Only for measured trees.
   * __split-tree__ - Returns result of splitting tree based on a predicate. Only for measured trees.
 * Bare tree - [ftree.tree](https://github.com/wagjo/ftree/blob/master/src/cljs/ftree/tree.cljs)
-  * __empty-tree__
   * __to-tree__ - Creates finger tree from a seq.
   * __create__ - Creates finger tree containing supplied elements.
 * Seqable tree - [ftree.seqable](https://github.com/wagjo/ftree/blob/master/src/cljs/ftree/seqable.cljs)
