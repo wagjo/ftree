@@ -57,25 +57,25 @@ List of functions:
   
 ## Examples
 
-    (:require [ftree.measure :as fm]
-              [ftree.cdl :as fcdl]
-              [ftree.core :as ftc])
+    (ns foo.bar
+      (:require [ftree.measure :as fm]
+                [ftree.cdl :as fcdl]
+                [ftree.core :as ftc]))
 
     ...
 
     (fm/set-measure! fcdl/counted-measure)
 
-    (let [t (cdl/create 1 2 3 4 5 6 7)])
+    (let [x (fcdl/create :a :b :c :d :e :f)]
+      [x (first x) (rest x)])
     
-    (let [x (ftree.dl/create :a :b :c :d :e :f)]
-      [x
-       (first x)
-       (rest x)])
+    (let [x (fcdl/create :a :b :c :d :e :f)]
+      [(ftc/conjl x 1) (ftc/conjr x 1) (ftc/peekl x) (ftc/popr x)])
     
-    (let [x (ftree.cdl/create :a :b :c :d :e :f :g :h :i :j :k :l :m :n :o)]
-      [(cdl/replace-at x 13 20 [:X :Y :Z])
-       (cdl/dropr x 4)
-       (cdl/insert-before x 10 :X :Y :Z)])
+    (let [x (fcdl/create :a :b :c :d :e :f :g :h :i :j :k :l :m :n :o)]
+      [(fcdl/replace-at x 13 20 [:X :Y :Z])
+       (fcdl/dropr x 4)
+       (fcdl/insert-before x 10 :X :Y :Z)])
 
 ## License
 
