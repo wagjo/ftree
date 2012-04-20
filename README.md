@@ -11,48 +11,47 @@ Resources on finger trees:
 * http://www.soi.city.ac.uk/~ross/papers/FingerTree.html
 * http://blip.tv/clojure/chris-houser-finger-trees-custom-persistent-collections-4632874
 
-## Quick overview
+## Usage
 
 * Common for all finger trees - [ftree.core](https://github.com/wagjo/ftree/blob/master/src/cljs/ftree/core.cljs)
-  * _conjl_ - conj[oin] l[eft]. Returns a new finger tree with the xs 'added'
+  * __conjl__ - conj[oin] l[eft]. Returns a new finger tree with the xs 'added'
   to the left.
-  * _conjr_ - conj[oin] r[ight]. Returns a new finger tree with the xs
+  * __conjr__ - conj[oin] r[ight]. Returns a new finger tree with the xs
   'added' to the right.
-  * _peekl_ - Returns leftmost element.
-  * _peekr_ - Returns rightmost element.
-  * _popl_ - Returns a new finger tree without leftmost element.
-  * _popr_ - Returns a new finger tree without rightmost element.
-  * _concat-tree_ - Returns tree which is a concatenation of two given trees.
-  * _measured_ - Returns measure of object o. Only for measured trees.
-  * _split-tree_ - Returns result of splitting tree based on a predicat.
+  * __peekl__ - Returns leftmost element.
+  * __peekr__ - Returns rightmost element.
+  * __popl__ - Returns a new finger tree without leftmost element.
+  * __popr__ - Returns a new finger tree without rightmost element.
+  * __concat-tree__ - Returns tree which is a concatenation of two given trees.
+  * __measured__ - Returns measure of object o. Only for measured trees.
+  * __split-tree__ - Returns result of splitting tree based on a predicate. Only for measured trees.
 * Bare tree - [ftree.tree](https://github.com/wagjo/ftree/blob/master/src/cljs/ftree/tree.cljs)
-  * _empty-tree_
-  * _to-tree_ - Creates finger tree from a seq.
-  * _create_ - Creates finger tree containing supplied elements.
-  * supports clojure.core 
-* Seqable tree - [ftree.seq](https://github.com/wagjo/ftree/blob/master/src/cljs/ftree/seq.cljs)
-  * _create_ - Creates seqable finger tree containing supplied elements.
-  * supports clojure.core seq, first, rest, 
+  * __empty-tree__
+  * __to-tree__ - Creates finger tree from a seq.
+  * __create__ - Creates finger tree containing supplied elements.
+* Seqable tree - [ftree.seqable](https://github.com/wagjo/ftree/blob/master/src/cljs/ftree/seqable.cljs)
+  * __create__ - Creates seqable finger tree containing supplied elements.
+  * supports clojure.core __seq, first, rest__
 * Double list - [ftree.dl](https://github.com/wagjo/ftree/blob/master/src/cljs/ftree/dl.cljs)
-  * _create_ - Creates double list containing supplied elements.
-  * supports clojure.core seq, first, rest, conj, peek, pop
+  * __create__ - Creates double list containing supplied elements.
+  * supports clojure.core __seq, first, rest, conj, peek, pop__
 * Counted double list - [ftree.cdl](https://github.com/wagjo/ftree/blob/master/src/cljs/ftree/cdl.cljs)
-  * _counted-measure_ - Measure to be used with counted double list
-  * _create_ - Creates counted double list containing supplied elements.
-  * _insert-before_ - Inserts elements into cdl before i position.
-  * _remove-at_ - Removes elements starting from i position.
-  * _replace-at_ - Replaces elements starting from i position with new ones.
-  * _update-at_ - Updates element at i position with result of calling update-fn.
-  * _dropl_ - Returns a new finger tree without n leftmost elements.
-  * _dropr_ - Returns a new finger tree without n rightmost elements.
-  * _split-at_ - Returns splitted tree at i position. i position will be in the
+  * __counted-measure__ - Measure to be used with counted double list
+  * __create__ - Creates counted double list containing supplied elements.
+  * __insert-before__ - Inserts elements into cdl before i position.
+  * __remove-at__ - Removes elements starting from i position.
+  * __replace-at__ - Replaces elements starting from i position with new ones.
+  * __update-at__ - Updates element at i position with result of calling update-fn.
+  * __dropl__ - Returns a new finger tree without n leftmost elements.
+  * __dropr__ - Returns a new finger tree without n rightmost elements.
+  * __split-at__ - Returns splitted tree at i position. i position will be in the
   second tree.
-  * supports clojure.core seq, first, rest, conj, peek, pop, count, nth, assoc
+  * supports clojure.core __seq, first, rest, conj, peek, pop, count, nth, assoc__
 * Setting measure - [ftree.measure](https://github.com/wagjo/ftree/blob/master/src/cljs/ftree/measure.cljs)
-  * _set-measure!_ - Sets new measure. Returns the old one.
-  * _with-measure_ - macro defined in [ftree/measure.clj](https://github.com/wagjo/ftree/blob/master/src/clj/ftree/measure.cljs)
+  * __set-measure!__ - Sets new measure. Returns the old one.
+  * __with-measure__ - macro defined in [ftree/measure.clj](https://github.com/wagjo/ftree/blob/master/src/clj/ftree/measure.clj)
   
-## Usage
+## Examples
 
     (:require [ftree.measure :as fm]
               [ftree.cdl :as fcdl]
