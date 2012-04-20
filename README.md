@@ -1,9 +1,10 @@
-Finger trees in Clojurescript
+Finger trees in Clojurescript.
 
 ## Overview
 
 Forked from https://github.com/clojure/data.finger-tree
-It is finished but tests, examples and proper packaging is not done.
+
+Library is finished but tests, examples and proper packaging is not done.
 
 Resources on finger trees:
 
@@ -12,6 +13,8 @@ Resources on finger trees:
 * http://blip.tv/clojure/chris-houser-finger-trees-custom-persistent-collections-4632874
 
 ## Usage
+
+Library is not packaged, you should copy ftree source files directly to your project.
 
 * Common for all finger trees - [ftree.core](https://github.com/wagjo/ftree/blob/master/src/cljs/ftree/core.cljs)
   * __conjl__ - conj[oin] l[eft]. Returns a new finger tree with the xs 'added'
