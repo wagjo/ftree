@@ -5,6 +5,24 @@ Finger trees in Clojurescript
 This library is based on Chris Houser's finger trees for Clojure.
 It is finished but test, examples and proper packaging is not done.
 
+
+Forked from https://github.com/clojure/data.finger-tree
+
+
+Create finger trees with following namespaces:
+
+* ftree.tree - bare tree
+* ftree.seqable - seqable tree
+* ftree.dl - double list
+* ftree.cdl - counted double list
+
+
+Resources on finger trees:
+
+* https://github.com/Chouser/talk-finger-tree
+* http://www.soi.city.ac.uk/~ross/papers/FingerTree.html
+* blip.tv/clojure/chris-houser-finger-trees-custom-persistent-collections-4632874
+
 ## Usage
 
     (:require [ftree.measure :as fm]
