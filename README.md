@@ -1,3 +1,19 @@
+# Deprecation warning
+
+__This library is deprecated in favor of https://github.com/wagjo/data.cljs__
+
+
+
+
+
+
+
+
+
+
+
+
+
 Finger trees in Clojurescript.
 
 ## Overview
